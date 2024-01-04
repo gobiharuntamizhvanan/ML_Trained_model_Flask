@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="icon" type="image" href="static/icon.jfif"> <!-- Replace "path/to/your/icon.png" with the actual path to your icon -->
+    <title>Prediction Form</title>
+</head>
+<body>
+  <div class="container">
+    <h1> Average Mark Predictor</h1>
+    <form method="post" action="/predict">
+        <label for="ToS">Time of Study</label>
+        <input type="number" name="ToS" required>
+        <label for="num_sub">Number of Subject</label>
+        <input type="number" name="number of subject" required>
+        <button type="submit">Conclude</button>
+    </form>
+    {% if prediction %}
+      <p>Predicted average marks:{{ prediction }}</p>
+    {% endif %}
+  </div>
+</body>
+</html>
